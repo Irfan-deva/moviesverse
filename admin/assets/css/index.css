@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  width: 100%;
+  height: 100%;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+table {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --primary-clr: #a12758;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 8px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: inherit;
+
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #e9e9e9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+  color: #222;
+}
+
+body {
+  background-color: #FCFCFC;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.wrapper .main,
+.wrapper .header {
+  width: 100%;
+  max-width: 1280px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.wrapper .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+  border: 1px solid #ddd;
+  margin-top: 8px;
+  border-radius: 4px;
+
+}
+
+.cta-cat {
+  display: flex;
+  gap: 2rem;
+}
+
+.cta-cat a {
+  background-color: var(--primary-clr);
+  padding: 8px 8px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: inherit;
+}
+
+.cta-addnew {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-addnew button {
+  background-color: rgb(29, 62, 155);
+
+
+}
+
+.main {
+
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+}
+
+.form-popup,
+.edit-popup-bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container form,
+.edit-popup-bg form,
+.form-popup form {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  gap: 1rem;
+  position: relative;
+}
+
+
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.login-container form .form-heading,
+.edit-popup-bg form .form-heading,
+.form-popup form .form-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+
+.login-container form input,
+.edit-popup-bg form input,
+.form-popup form input {
+  padding: 8px;
+}
+
+.edit-popup-bg form #cancel,
+.form-popup form #cancel {
+  font-size: 1.75rem;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-weight: 600;
+  color: gray;
+  cursor: pointer;
+}
+
+.login-container form input[type="submit"],
+.edit-popup-bg form input[type="submit"],
+.form-popup form input[type="submit"] {
+  background-color: rgb(29, 62, 155);
+  cursor: pointer;
+  border: none;
+  padding: 12px 12px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: inherit;
+  text-transform: uppercase;
+  margin-top: 1rem;
+
+}
+
+.edit-popup-bg form input[type="number"] {
+  pointer-events: none;
+}
+
+.alert-bg {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert {
+  padding: 1rem;
+  width: fit-content;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.alert .action {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.75rem;
+  align-items: center;
+
+
+}
+
+.alert .head {
+  border-bottom: 1px solid #fff1f7;
+  padding-bottom: .5rem;
+}
+
+.alert .action button {
+  background-color: transparent;
+}
+
+.alert .action #cancel,
+.alert .action #ok {
+  color: #111;
+}
+
+.main .container .content table {
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 13px;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+
+.main .container .content table thead tr {
+  background: #a12758;
+  text-align: left;
+  color: #fff;
+}
+
+.main .container .content table th {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.main .container .content table th,
+.main .container .content table td {
+  padding: 12px 15px;
+}
+
+.main .container .content tbody tr {
+  border-bottom: 1px solid #dddddd;
+  color: rgb(93, 93, 93);
+}
+
+.main .container .content tbody tr:nth-of-type(even) {
+  background: #f3f3f3;
+}
+
+.main .container .content tbody tr:last-of-type {
+  border-bottom: 2px solid #a12758;
+}
+
+.main .container .content tbody tr td button:first-child {
+  background-color: rgb(6, 143, 22);
+  cursor: pointer;
+  border: none;
+  padding: 8px 8px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: inherit;
+  margin-right: 8px;
+
+}
+
+.main .container .content tbody tr td button:last-child {
+  background-color: #cd182a;
+  cursor: pointer;
+  border: none;
+  padding: 8px 8px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: inherit;
+}
+
+.main .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main .container .content #pagination {
+  margin-top: 1rem;
+  display: flex;
+  gap: 6px;
+}
+
+.main .container .content #pagination a {
+  background-color: #227e14;
+  color: #fff;
+  display: inline-block;
+  width: 24px;
+  padding: 4px 0;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.main .container .content #pagination .active {
+  background-color: #a12758;
+}
+
+.response .success {
+  background-color: #ebfce8;
+  color: #227e14;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.response .error {
+  background-color: #ffeaea;
+  color: #c62a2a;
+  padding: 10px;
+  font-size: 1rem;
+}

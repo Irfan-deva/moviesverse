@@ -1,0 +1,16 @@
+
+# HTID:20655582: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+#php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:20655582:
+
+
+
+#turn RewriteEngine on
+RewriteEngine on
+
+RewriteRule ^movie/([0-9a-zA-Z-]+)/$ details.php?q=$1 [NC,L]
+# + any length
+# NC non case sensitive
+# L makes this the last rule that this specific condition will match
+
+RewriteRule ^movies/ movies.php [NC,L]
